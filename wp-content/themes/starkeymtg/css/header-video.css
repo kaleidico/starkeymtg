@@ -1,0 +1,101 @@
+/* ====================================
+   Demo specific styling
+   ==================================== */
+.fp-video-hero-container {
+    overflow: hidden !important;
+    max-height: 600px;
+    position: relative;
+	width: 100%;
+}
+video#lenderful-hero-video {
+    max-height: 100%;
+	object-fit: cover;
+}
+
+@media all and (max-width: 64em) {
+	video#lenderful-hero-video {
+		display: none;
+	}
+	.fp-video-hero-container {
+		background: url('../video/lenderful-front-page.jpg') no-repeat center center / cover;
+		height: 300px;
+	}
+}
+
+/* Lenderful Styling */
+.fp-video-hero-content {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    width: 100%;
+	color: #fff;
+	transform: translateY(-65%);
+	-webkit-transform: translateY(-65%);
+	-o-transform: translateY(-65%);
+	-moz-transform: translateY(-65%);
+	
+}
+.fp-video-hero-content h1, .fp-video-hero-content .fp-welcome-line-1, .fp-video-hero-content .fp-welcome-line-2 {
+	text-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
+}
+.fp-video-hero-container h1 {
+    margin-bottom: 0 !important;
+    text-align: center;
+}
+.fp-video-hero-nav-bar input#input_28_1_1 {
+    color: #000;
+}
+.fp-video-hero-nav-bar div#gform_wrapper_28 {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+}
+.fp-video-hero-nav-bar .gform_wrapper form {
+    text-align: center !important;
+}
+.fp-video-hero-cta-buttons .button {
+	border-radius: 0 !important;
+}
+
+.fp-video-hero-nav-bar .validation_error {
+    color: #f00 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.fp-video-hero-nav-bar .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.gfield_description, .fp-video-hero-nav-bar .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container, .fp-video-hero-nav-bar .gform_wrapper li.gfield.gfield_error.gfield_contains_required fieldset legend.gfield_label, .fp-video-hero-nav-bar .gform_wrapper li.gfield.gfield_error.gfield_contains_required label.gfield_label {
+    margin-left: auto !important;
+    text-align: center !important;
+    padding: 0 !important;
+}
+.fp-video-hero-nav-bar .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container, .fp-video-hero-nav-bar .gform_wrapper li.gfield_html {
+	max-width: 100% !important;
+} 
+
+@media all and (max-width: 40em) {
+	.fp-video-hero-container h1 {
+		margin-top: 0.3em !important;
+	}
+	.fp-video-hero-cta-buttons .more-top-padding {
+    padding-top: 0.5em !important;
+}
+.fp-video-hero-nav-bar .validation_error {
+    font-size: 0.8em !important;
+	}
+}
+@media all and (min-width: 40em) {
+	.fp-video-hero-container h1 {
+		font-size: 4rem;	
+	}
+}
+@media all and (min-width: 64em) {
+.fp-video-hero-container h1 {
+    font-size: 5.625rem;
+}
+}
+@media all and (max-width: 64em) {
+	.fp-welcome-line-2 {
+		display: none !important;	
+	}
+}

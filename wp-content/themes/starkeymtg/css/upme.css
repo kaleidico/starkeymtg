@@ -1,0 +1,36 @@
+div.upme-head, div.upme-post-head, div.upme-custom-head {
+    background: none !important;
+}
+div.upme-widget-wrap a.upme-button, input[type=submit].upme-button, input[type=button].upme-button, button.upme-button {
+	background: #88c857; /* Old browsers */
+	background: -moz-linear-gradient(top,  #88c857 0%, #74b042 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#88c857), color-stop(100%,#74b042)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #88c857 0%,#74b042 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #88c857 0%,#74b042 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #88c857 0%,#74b042 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #88c857 0%,#74b042 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#88c857', endColorstr='#74b042',GradientType=0 ); /* IE6-9 */	
+}
+div.upme-wrap div.upme-inner {
+    border: 0 !important;
+    box-shadow: none !important;
+    background-color: none !important;
+}
+.upme-registration .upme-head, .upme-registration .upme-field.upme-separator.upme-edit.upme-edit-show.upme-clearfix.upme-account_info_separator {
+    display: none !important;
+}
+.upme-registration .upme-social-header {
+    border: 0 !important;
+}
+.upme-registration .upme-field-type i, .upme-registration .upme-post-field-type i, .upme-login .upme-field-type i, .upme-login .upme-post-field-type i  {
+    background: none;
+    color: #000;
+    font-size: 1.6em;
+}
+button#upme-register, input.upme-button.upme-login {
+    font-size: 1.5em;
+    border: 0;
+}
+.page-template-page-gated .upme-login-wrapper .upme-head, .page-template-page-gated .upme-login-wrapper div#login-heading-1 {
+    display: none;
+}

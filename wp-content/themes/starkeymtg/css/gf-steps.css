@@ -1,0 +1,85 @@
+.gf_step { position: relative; }
+.gform_body {
+    position: relative;
+    z-index: 9;
+}
+span.gf_step_label {
+    float: none !important;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0.7em;
+    width: 100%;
+   font-family: 'Roboto Slab', sans-serif;
+	font-weight: 900;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-55%);
+}
+.gform_wrapper .gf_page_steps { border-bottom: 0 !important; }
+	.mortgage-application-form .gform_body {
+		width: 79% !important;
+		float: right;
+		vertical-align: top;
+	}
+	.gf_step {
+		padding-bottom: 2em;
+	}
+	.gform_wrapper .gf_step span.gf_step_number {
+		border-radius: 50% /* 0 50% 50% */;
+		width: 36px;
+		height: 36px;
+		background: #eee;
+		border: 3px solid #2a5470;
+		color: #2a5470;
+		text-align: center;
+		font: 29px Arial, sans-serif !important;
+	}
+	div#gf_page_steps_5 {
+		position: absolute;
+	}
+	#gform_wrapper_5 .validation_error {
+		width: 79%;
+		float: right;
+		margin-top: 0 !important;
+	}
+	
+@media all and (max-width: 40em) {
+	div#gf_page_steps_5 {
+		float: none !important;
+		width: 100% !important;
+		position: relative;
+	}
+	#gform_wrapper_5 .validation_error, .mortgage-application-form .gform_body {
+		width: 100% !important;
+		float: none;
+	}
+	#gf_page_steps_5 .gf_step { margin-right: 0 !important; }
+}
+@media all and (min-width: 64em) {
+	.gf_step {
+		display: block !important;
+		    max-width: 90px;
+	}
+	div#gf_page_steps_5 {
+		max-width: 140px;
+		white-space: nowrap;
+	}
+}
+@media all and (max-width: 64em) {
+	.gf_step {
+    width: 100%;
+    max-width: 36px;
+}
+	.mortgage-application-form .gform_body {
+    width: 100% !important;
+    float: none;
+    clear: both;
+    position: relative;
+}
+div#gf_page_steps_5 {
+    position: relative;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+		#gf_page_steps_5 .gf_step_label { display: none; }
+}

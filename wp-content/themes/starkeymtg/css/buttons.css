@@ -1,0 +1,129 @@
+/* Style Formatting */
+a.button, .gform_page_footer input[type="button"], .gform_footer input[type="submit"], .gform_page_footer input[type="submit"]  {
+	text-decoration: none !important;
+	font-size: 1.1em;
+	border-radius: 5px !important;
+	font-weight: 100;
+	display: inline-block;
+	font-family: Roboto, sans-serif;
+	color: #fff;
+}
+.button {
+	transition: background-color 300ms ease-out !important;
+	-webkit-transition: background-color 300ms ease-out !important;
+	-o-transition: background-color 300ms ease-out !important;
+	-moz-transition: background-color 300ms ease-out !important;
+    padding: 7px 10px 7px 10px;
+	text-align: center;
+}
+.button.full-width {
+	width: 100%;
+}
+.button.width-95 {
+	width: 95%;
+	margin: 0 auto;
+}
+.button.shadowed {
+	-webkit-box-shadow: 10px 10px 58px -23px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 58px -23px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 58px -23px rgba(0,0,0,0.75);
+}
+.button.white-border { border: 5px solid #fff; }
+.button.big-button {
+	white-space: nowrap;
+}
+.button.big-button {
+	height: 170px;
+	position: relative;
+	font-family: 'Roboto Slab', sans-serif;
+	font-weight: 400;
+	border: 4px solid #fff !important;
+}
+.big-button .big-button-content {
+	position: absolute;
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	font-size: 1.1em;
+}
+a.button:hover {
+	background: none;
+}
+.button.all-caps {
+	text-transform: uppercase;
+}
+.button.less-padding {
+    padding-top: 2px;
+    padding-bottom: 0px;
+}
+
+/* Colors */
+.button.blue, .gform_page_footer input[type="button"], .gform_footer input[type="submit"], .gform_page_footer input[type="submit"] {
+	background: #5999d1; /* Old browsers */
+background: -moz-linear-gradient(top,  #5999d1 1%, #4180cb 99%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#5999d1), color-stop(99%,#4180cb)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #5999d1 1%,#4180cb 99%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #5999d1 1%,#4180cb 99%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #5999d1 1%,#4180cb 99%); /* IE10+ */
+background: linear-gradient(to bottom,  #5999d1 1%,#4180cb 99%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5999d1', endColorstr='#4180cb',GradientType=0 ); /* IE6-9 */
+border: 2px solid #fff;	
+}
+.button.blue:hover, .gform_page_footer input[type="button"]:hover, .gform_footer input[type="submit"]:hover, .gform_page_footer input[type="submit"]:hover {
+	background: none;
+	border: 2px solid #5999d1;
+	color: #5999d1;
+}
+.button.green {
+	background: #88c857; /* Old browsers */
+	background: -moz-linear-gradient(top,  #88c857 0%, #74b042 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#88c857), color-stop(100%,#74b042)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #88c857 0%,#74b042 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #88c857 0%,#74b042 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #88c857 0%,#74b042 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #88c857 0%,#74b042 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#88c857', endColorstr='#74b042',GradientType=0 ); /* IE6-9 */	
+	border: 2px solid #fff;
+}
+.button.green:hover {
+	background: none;
+	border: 2px solid #88c857;
+	color: #88c857;	
+}
+.button.orange {
+	background: #ff784b; /* Old browsers */
+background: -moz-linear-gradient(#ff784b 0%, #e65c2e 100%);
+background: -webkit-linear-gradient(#ff784b 0%, #e65c2e 100%);
+background: -webkit-gradient(linear, 0 0, 0 100%, from(#ff784b), to(#e65c2e));
+background: -o-linear-gradient(#ff784b 0%, #e65c2e 100%);
+background: linear-gradient(#ff784b 0%, #e65c2e 100%); /* FF3.6-15 */
+ /* Chrome10-25,Safari5.1-6 */
+ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff784b', endColorstr='#e65c2e',GradientType=0 ); /* IE6-9 */
+	border: 2px solid #fff;
+}
+.button.orange:hover {
+	border: 2px solid #ff784b;
+	color: #e65c2e;
+}
+.button.big-button:hover {
+	color: #fff;
+}
+a#gform_save_5_link {
+    font-size: 0.9em;
+}
+.mortgage-select-button {
+	margin: 0;
+    padding: 0.5rem;
+    width: 100%;
+    text-transform: uppercase;
+}
+.gform_save_link {
+    float: right;
+}
+.row.contact-button-container {
+    margin-top: 1em;
+}

@@ -1,0 +1,35 @@
+.gform_wrapper { display: block !important; }
+
+.gform_wrapper ul { list-style: none; padding-left: 0; }
+
+.ginput_container {
+    margin-bottom: 1em;
+}
+
+.validation_error {
+    color: #790000;
+    margin-bottom: 1em;
+    font-weight: 900;
+}
+.gfield_error {
+    background: #FFDFE0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.gfield_description.validation_message {
+    font-style: italic;
+}
+.gform_save_link {
+    float: right;
+    font-size: 0.9em;
+}
+label.gfield_label {
+    margin-bottom: 0 !important;
+}
+
+
+/* PURCHASE FORM */
+	/* Zip Code */
+#input_26_77_5_container {
+	margin-left: 0 !important;
+}

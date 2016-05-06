@@ -1,0 +1,12 @@
+@media only screen and (max-width: 960px) { 
+	td input[type=text] {
+		width: 100%;
+		margin: 5px 0;
+	}
+	.tab-eff td {
+		width: 100%; display:block; line-height: 2;
+	}
+	.lh {
+		line-height: 2;
+	}
+}

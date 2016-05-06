@@ -1,0 +1,21 @@
+.fp-hero-header {
+    background: none;
+    height: auto;
+}
+.header-upme, ul#menu-header-navigation, a.button.blue, .fp-hero-logo {
+    display: none;
+}
+.fp-welcome { color: #000; }
+
+.about-hero-container {
+    background: none;
+    color: #000;
+}
+
+.fp-footer {
+    background: none;
+    color: #000;
+}
+.fp-footer a {
+    color: #000;
+}

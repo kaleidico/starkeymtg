@@ -1,0 +1,624 @@
+/*
+Theme Name: Starkey Mortgage
+Theme URI: http://starkeymtg.com
+Author: Kaleidico
+Author URI: http://kaleidico.com
+Description: A theme created for Lenderful.com.
+Version: 2.0
+License: GNU General Public License
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300|Roboto:400,300,700);
+
+html, body {
+       overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+  height: auto; }
+
+  /* Responsive Alignments - a Work in Progress */
+  .xs-center-align, .xs-align-center { text-align: center; }
+  .xs-right-align, .xs-align-right { text-align: right; }
+
+  @media all and (min-width: 970px) {
+  	.md-left-align { text-align: left; }
+  	.md-center-align { text-align: center; }
+  	.md-right-align { text-align: right; }
+  }
+
+
+/* Colors */
+.blue-gradient, .gform_next_button, .gform_previous_button {
+       background: #2c68ab;
+       background: -moz-linear-gradient(top, #2c68ab 0%, #265c9c 100%);
+       background: -webkit-linear-gradient(top, #2c68ab 0%,#265c9c 100%);
+       background: linear-gradient(to bottom, #2c68ab 0%,#265c9c 100%);
+       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c68ab', endColorstr='#265c9c',GradientType=0 );
+}
+
+.blue-gradient:hover, .gform_next_button:hover, .gform_previous_button:hover {
+  background: #438cca; }
+
+.green-gradient {
+  background: #88c857;
+  background: -moz-linear-gradient(top, #88c857 0%, #74b042 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #88c857), color-stop(100%, #74b042));
+  background: -webkit-linear-gradient(top, #88c857 0%, #74b042 100%);
+  background: -o-linear-gradient(top, #88c857 0%, #74b042 100%);
+  background: -ms-linear-gradient(top, #88c857 0%, #74b042 100%);
+  background: linear-gradient(to bottom, #88c857 0%, #74b042 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#88c857', endColorstr='#74b042',GradientType=0 ); }
+
+.green-gradient:hover {
+  background: #7ac143; }
+
+.red-gradient {
+       /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cc2d33+1,992323+100 */
+background: #cc2d33; /* Old browsers */
+background: -moz-linear-gradient(top,  #cc2d33 1%, #992323 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #cc2d33 1%,#992323 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #cc2d33 1%,#992323 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc2d33', endColorstr='#992323',GradientType=0 ); /* IE6-9 */
+}
+.red-gradient:hover {
+       background: #cc2d33;
+}
+.btn.orange {
+  background: #cc2d33; }
+
+.btn.orange:hover {
+  background: #d74f54; }
+
+.btn.white-border {
+  border-color: #fff; }
+
+/* Spacings */
+.more-top-padding {
+  padding-top: 1em; }
+
+.more-top-margin {
+  margin-top: 1em !important; }
+
+.more-bottom-padding {
+  padding-bottom: 1em; }
+
+.more-bottom-margin {
+  margin-bottom: 1em; }
+
+.no-top-margin {
+  margin-top: 0; }
+
+.no-bottom-margin {
+  margin-bottom: 0 !important; }
+
+.even-more-bottom-margin {
+  margin-bottom: 2em; }
+
+/* Formatting */
+.center, .centered {
+  text-align: center; }
+
+.italic, .italics, .italicize, .em {
+  font-style: italics; }
+
+.caps {
+  text-transform: uppercase; }
+
+.larger-font {
+  font-size: 1.5em; }
+
+/* General Tags */
+html, body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Slab", sans-serif;
+  color: #1868A5; }
+
+a, a:focus {
+  color: #438cca; }
+
+a:hover {
+  color: #7ac143; }
+
+.wp-caption {
+  text-align: center;
+  background: #eee;
+  padding: 0.5em;
+  margin-top: 0;
+  max-width: 100%;
+  margin-bottom: 1em; }
+
+p.wp-caption-text {
+  font-size: 1rem;
+  text-align: left;
+  font-style: italic;
+  padding-left: 0.9em;
+  padding-right: 0.9em;
+  margin-top: 0.5em;
+  color: #1868A5; }
+
+/* HEADER */
+header {
+  padding-top: 5px; }
+
+header a:hover, header a:focus {
+  text-decoration: none; }
+
+.header-cta {
+  font-weight: 900; }
+
+.desktop-nav ul {
+  padding-left: 0;
+  list-style: none; }
+
+.desktop-nav li {
+  display: inline-block;
+  padding-right: 1.5em; }
+
+  .header-row-2 {
+     background: #2c68ab;
+     background: -moz-linear-gradient(top, #2c68ab 0%, #265c9c 100%);
+     background: -webkit-linear-gradient(top, #2c68ab 0%,#265c9c 100%);
+     background: linear-gradient(to bottom, #2c68ab 0%,#265c9c 100%);
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c68ab', endColorstr='#265c9c',GradientType=0 );
+     text-transform: uppercase !important;
+     margin-top: 0.5em;
+     text-decoration: none;
+     text-align: center;
+ }
+ .desktop-nav #menu-header-navigation li a {
+    font-size: 1.1em;
+    padding-left: 6px;
+    padding-right: 5px;
+    padding-top: 10px;
+    display: block;
+    color: #fff;
+}
+ .desktop-nav #menu-header-navigation li a:hover {
+        color: #85C554;
+ }
+
+	/* Nav */
+button.navbar-toggle {
+    float: left;
+}
+.navbar-header {
+    background-color: #fff;
+}
+.navbar {
+	border: 0;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #2860A1;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #555;
+    background-color: #1d4573;
+}
+button.navbar-toggle {
+    background: #fff;
+}
+#bs-example-navbar-collapse-1 a {
+    color: #fff;
+}
+.navbar-default, .navbar-header {
+       background: #2860A1;
+}
+nav.navbar.navbar-default {
+    margin-bottom: 0;
+}
+
+/* FRONT PAGE */
+.fp-hero {
+  background: url(img/home-feature.jpg) no-repeat center center / cover;
+  color: #fff;
+  position: relative;
+      text-shadow: #000 3px 2px;
+          background-position: 0 30%;
+ }
+
+.fp-hero h1 {
+  font-size: 2.625rem;
+color: #fff; }
+
+.fp-hero .fp-welcome-line-1 {
+  font-size: 1.5rem;
+  line-height: 1em; }
+
+.fp-hero .fp-welcome-line-2 {
+  font-size: 1.1rem; }
+
+.fp-hero-btn {
+  border: 4px solid #fff;
+  padding: 2rem 0; }
+
+.fp-hero-btn:hover, .fp-hero-btn:focus {
+  border-color: #fff; }
+
+.fp-hero-btn-icon {
+  font-size: 3rem; }
+
+.fp-hero-btn-text {
+  font-size: 1.25rem;
+  font-family: "Roboto Slab", sans-serif; }
+
+.fp-hero-chat-container {
+  position: relative;
+  max-width: 530px;
+  margin: auto; }
+
+.fp-hero-chat-btn {
+  position: absolute;
+  top: 0;
+  right: 0%;
+  width: 40%; }
+
+  .fp-chat {
+    background: #2861A2;
+    color: #fff;
+    font-family: 'Roboto Slab', sans-serif;
+}
+.fp-chat-content {
+    font-size: 1.5em;
+}
+.pretty-chat-btn .chat-button-icon, .pretty-chat-btn .chat-button-content {
+       display: inline-block;
+       text-shadow: #000 3px 2px;
+}
+.pretty-chat-btn .chat-button-icon {
+    font-size: 3em;
+    margin-right: 0.2em;
+    position: relative;
+    bottom: 5px;
+}
+.pretty-chat-btn .chat-button-content {
+    font-size: 1.3em;
+    font-weight: 900;
+}
+.aaa-chat-button-container {
+    text-align: center;
+}
+
+
+/* Flickity Popular Mortgage Programs */
+.tg-cell {
+  width: 100%;
+  margin-right: 30px;
+  max-width: 250px;
+  background: #ebf2f9; }
+
+.tg-top {
+  background: #438cca;
+  color: #fff;
+  text-align: center;
+  padding: 0.8em;
+  min-height: 185px; }
+
+.tg-cell .button {
+  border-radius: 5px; }
+
+.tg-price {
+  font-size: 1.9em; }
+
+.tg-per-month {
+  color: #026569;
+  font-size: 1.4em; }
+
+.tg-top p {
+  margin-bottom: 0; }
+
+.tg-title {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  margin-top: 0;
+  min-height: 80px; }
+
+.tg-bottom {
+  padding: 0 0.8em 0 0.8em; }
+
+.tg-btn {
+  text-transform: uppercase;
+  border: 4px solid #fff; }
+
+.tg-btn:hover {
+  border: 4px solid #fff; }
+
+.tg-gallery .flickity-prev-next-button {
+  background: rgba(158, 210, 119, 0.8);
+  transition: background-color 300ms ease-out;
+  -webkit-transition: background-color 300ms ease-out;
+  -o-transition: background-color 300ms ease-out;
+  -moz-transition: background-color 300ms ease-out; }
+
+.tg-gallery .flickity-prev-next-button:hover {
+  background: rgba(42, 84, 112, 0.8); }
+
+.tg-gallery .flickity-prev-next-button .arrow {
+  fill: #fff; }
+
+.tg-number-label {
+  color: #1868A5; }
+
+.tg-number {
+  color: #000; }
+
+.tg-gallery .loan-details-buttons {
+  text-align: center;
+  padding-bottom: 1em; }
+
+.row.fp-trending {
+  margin-bottom: 3em; }
+
+ul.tg-description {
+  font-size: 0.8em;
+  margin-bottom: 2em; }
+
+.tg-more-details {
+  padding-left: 1em; }
+
+.carousel-footnotes {
+  margin-top: 2em; }
+
+/* ABOUT PAGE */
+.about-hero {
+  background: #1868A5;
+  color: #fff; }
+
+.about-hero h1, .about-hero h2, .about-hero h3, .about-hero h4, .about-hero h5, .about-hero h6, .blue-section h1, .blue-section h2, .blue-section h3, .blue-section h4, .blue-section h5, .blue-section h6 {
+  color: #fff; }
+
+.blue-section {
+  background: #438cca;
+  color: #fff; }
+
+/* Standard Pages and Posts */
+.single h1, .page h1 {
+    margin-bottom: 1em;
+}
+
+
+/* CATEGORY */
+.category-mortgage-calculators .loop-title {
+  display: none; }
+
+.calc-desc h3 {
+  margin-top: 5px;
+  margin-bottom: 1em; }
+
+/* LEARNING CENTER */
+.page-template-page-learningcenter h2, .category h2 {
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 0.5em; }
+
+/* FORMS */
+/* SIDEBAR */
+.pretty-chat-button-container {
+  font-family: 'Roboto Slab', sans-serif !important;
+  font-weight: 900 !important;
+  text-shadow: #000 3px 2px;
+  text-align: center;
+  max-width: 200px;
+  margin: 1em auto 1em; }
+  .pretty-chat-button-container .chat-button-icon {
+    font-size: 3em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    position: relative;
+    top: -4px; }
+  .pretty-chat-button-container .chat-button-content {
+    display: inline-block;
+    font-size: 1.5em;
+    vertical-align: middle;
+    line-height: 1em; }
+
+.gform_next_button, .gform_previous_button {
+    display: inline-block;
+    padding: .375rem 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+	color: #fff;
+}
+
+/* Refinance/Purchase options */
+.options-form-label {
+    font-weight: 900;
+    color: #438cca;
+}
+
+
+/* FOOTER */
+footer {
+  background: #438cca;
+  color: #fff; }
+
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
+  color: #fff; }
+
+footer ul#menu-footer-navigation {
+  list-style: none; }
+
+footer #menu-footer-navigation li {
+  display: inline-block;
+  margin-right: 10px; }
+
+footer #menu-footer-navigation li:last-child {
+  margin-right: 0; }
+
+footer #menu-footer-navigation li:first-child {
+  margin-left: 0; }
+
+footer #menu-footer-navigation li a {
+  color: #fff; }
+
+.fp-footer-copyright {
+  font-size: 0.8em; }
+
+
+
+.xs-left { text-align: left; }
+.xs-right { text-align: right; }
+.xs-center { text-align: center; }
+.xs-justify { text-align: justify; }
+
+
+#wrapper > div.widget-content > a {
+	display: none;
+	}
+
+
+
+@media (min-width: 768px) {
+  .sm-left { text-align: left; }
+  .sm-right { text-align: right; }
+  .sm-center { text-align: center; }
+  .sm-justify { text-align: justify; }
+}
+
+@media (min-width: 992px) {
+  .md-left { text-align: left; }
+  .md-right { text-align: right; }
+  .md-center { text-align: center; }
+  .md-justify { text-align: justify; }
+}
+
+@media (min-width: 1200px) {
+  .lg-left { text-align: left; }
+  .lg-right { text-align: right; }
+  .lg-center { text-align: center; }
+  .lg-justify { text-align: justify; }
+}
+
+@media all and (max-width: 970px) {
+	.wp-caption, .alignleft, .aligncenter, .alignright { display: block; float: none !important; margin: 1em auto 1em; }
+}
+@media all and (min-width: 970px) {
+  .alignleft {
+    float: left;
+    margin-right: 1em; }
+
+  .alignright {
+    float: right;
+    margin-left: 1em; }
+
+  /* HEADER */
+  .header-cta {
+    margin-top: 25px; }
+
+  .desktop-nav {
+    display: block; }
+
+  .header-user {
+    margin-top: 20px; }
+
+  .desktop-right {
+    text-align: right; }
+
+  .blue-gradient-desktop {
+         background: #2c68ab;
+        background: -moz-linear-gradient(top, #2c68ab 0%, #265c9c 100%);
+        background: -webkit-linear-gradient(top, #2c68ab 0%,#265c9c 100%);
+        background: linear-gradient(to bottom, #2c68ab 0%,#265c9c 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c68ab', endColorstr='#265c9c',GradientType=0 );
+}
+
+  .blue-gradient-desktop:hover {
+    background: #438cca; }
+
+  .green-gradient-desktop {
+    background: #88c857;
+    background: -moz-linear-gradient(top, #88c857 0%, #74b042 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #88c857), color-stop(100%, #74b042));
+    background: -webkit-linear-gradient(top, #88c857 0%, #74b042 100%);
+    background: -o-linear-gradient(top, #88c857 0%, #74b042 100%);
+    background: -ms-linear-gradient(top, #88c857 0%, #74b042 100%);
+    background: linear-gradient(to bottom, #88c857 0%, #74b042 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#88c857', endColorstr='#74b042',GradientType=0 ); }
+
+  .green-gradient-desktop:hover {
+    background: #7ac143; }
+
+    .red-gradient-desktop {
+           /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cc2d33+1,992323+100 */
+    background: #cc2d33; /* Old browsers */
+    background: -moz-linear-gradient(top,  #cc2d33 1%, #992323 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #cc2d33 1%,#992323 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #cc2d33 1%,#992323 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc2d33', endColorstr='#992323',GradientType=0 ); /* IE6-9 */
+    }
+    .red-gradient-desktop:hover {
+          background: #cc2d33;
+   }
+
+  /* FRONT PAGE */
+  .fp-hero {
+    overflow: hidden; }
+
+  .fp-hero h1 {
+    font-size: 5.625rem; }
+
+  .fp-hero .fp-welcome-line-1 {
+    font-size: 3rem; }
+
+  .fp-hero .fp-welcome-line-2 {
+    font-size: 1.25rem; }
+
+  .fp-hero-chat-container {
+    margin-top: 135px;
+    position: absolute;
+    right: 0; } }
+
+@media all and (min-width: 1024px) {
+	/* Mortgage Options Table */
+.mortgage-options-table a.button.blue {
+    padding: 0px;
+    width: 100%;
+    max-width: 200px;
+}
+.mortgage-options-table tr td, .mortgage-options-table th { padding: 1em; }
+.mortgage-options-table tr:nth-child(even)	{ background-color:#eee; }
+.options-form-label {
+    padding-top: 20px;
+}
+table.mortgage-options-table {
+    width: 100% !important;
+}
+table.mortgage-options-table tbody { border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; }
+.recalc-submit {
+    margin-top: 60px;
+}
+}
+@media all and (min-width: 1290px) {
+  .flickity-prev-next-button.previous {
+    left: -50px !important; }
+
+  .flickity-prev-next-button.next {
+    right: -50px !important; }
+}
+
+
+@media all and (min-width: 992px) {
+       .fp-chat-content {
+           padding: 35px 0;
+       }
+       .aaa-chat-button-container {
+              padding: 24px 0;
+       }
+       .header-btn {
+    margin-top: 15px;
+}
+}
