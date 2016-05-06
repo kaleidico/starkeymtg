@@ -108,4 +108,14 @@
 </div>
 <!-- END CHAT/CALL/ONLINE APPLICATION -->
 
+<div class="fp-capture more-bottom-margin">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/starkey-capture.jpg" alt="Screenshot of Starkey Website">
+			</div>
+		</div>
+	</div>
+</div>
+
 <?php get_footer(); ?>

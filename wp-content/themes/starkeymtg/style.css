@@ -8,7 +8,7 @@ Version: 2.0
 License: GNU General Public License
 */
 
-@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300|Roboto:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
 
 html, body {
        overflow-x: hidden;
@@ -110,11 +110,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc2d33', end
 
 /* General Tags */
 html, body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
   font-size: 16px; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
   color: #1868A5; }
 
 a, a:focus {
@@ -148,7 +150,7 @@ header a:hover, header a:focus {
   text-decoration: none; }
 
 .header-cta {
-  font-weight: 900; }
+  font-weight: 700; }
 
 .desktop-nav ul {
   padding-left: 0;
@@ -243,7 +245,9 @@ color: #fff; }
 
 .fp-hero-btn-text {
   font-size: 1.25rem;
-  font-family: "Roboto Slab", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+font-weight: 700;
+}
 
 .fp-hero-chat-container {
   position: relative;
@@ -259,7 +263,8 @@ color: #fff; }
   .fp-chat {
     background: #2861A2;
     color: #fff;
-    font-family: 'Roboto Slab', sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
 }
 .fp-chat-content {
     font-size: 1.5em;
@@ -397,8 +402,8 @@ ul.tg-description {
 /* FORMS */
 /* SIDEBAR */
 .pretty-chat-button-container {
-  font-family: 'Roboto Slab', sans-serif !important;
-  font-weight: 900 !important;
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 700 !important;
   text-shadow: #000 3px 2px;
   text-align: center;
   max-width: 200px;
