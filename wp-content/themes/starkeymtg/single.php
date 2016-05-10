@@ -16,14 +16,7 @@ get_header(); ?>
 	</div>
 
 	<div class="row more-bottom-margin">
-		<?php if(in_category('mortgage-calculators')) { ?>
-			<div class="col-xs-12 col-md-3">
-				<?php dynamic_sidebar( 'mortgage-calculators-sidebar' ); ?>
-			</div>
-			<div class="col-xs-12 col-md-9">
-		<?php } else { ?>
 			<div class="col-xs-12">
-		<?php }; ?>
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<?php the_content(); ?>
 			</div>
