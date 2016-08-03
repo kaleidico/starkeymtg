@@ -10,6 +10,264 @@ License: GPL2
 */
 
 
+
+// *****************  new function ********************
+// *****************  new function ********************
+// *****************  new function ********************
+// *****************  new function ********************
+// *****************  new function ********************
+// *****************  new function ********************
+
+
+
+//tell wordpress to register the demolistposts shortcode
+add_shortcode("api-errors-test", "api_errors_handler");
+
+
+
+function api_errors_handler() {
+  //run function that actually does the work of the plugin
+  $demolph_output = api_errors_function();
+  //send back text to replace shortcode in post
+  return $demolph_output;
+}
+
+
+function api_errors_function() {
+
+ob_start(); // begin output buffering
+
+//include 'wp-content/plugins/kal_functions/zfp_output.php';
+
+ global $wpdb;
+
+        $error_timestamp=time();
+        $line_number=287;
+        $error_msg='Lenderful Alert: API call failure';
+
+
+        $wpdb->insert("lenderful_api_errors", array(
+   "error_timestamp" => $error_timestamp,
+   "line_number" => $line_number,
+   "error_msg" => $error_msg
+   ));
+
+
+
+$output = ob_get_contents(); // end output buffering
+    ob_end_clean(); // grab the buffer contents and empty the buffer
+    return $output;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+// *****************  new function ********************
+// *****************  new function ********************
+// *****************  new function ********************
+// *****************  new function ********************
+// *****************  new function ********************
+// *****************  new function ********************
+
+
+
+
+
+
+// function to registration Shortcode
+
+function gman_registration_shortcode( $atts ) {
+
+    global $wpdb, $user_ID; 
+
+  $firstname='';
+
+  $lastname='';
+
+  $username='';
+
+  $email='';
+
+  
+
+  
+
+
+
+  if(sanitize_text_field( $_POST['com_submit']) != ''){
+
+
+
+    //$firstname=sanitize_text_field( $_REQUEST['com_firstname'] );
+
+    //$lastname=sanitize_text_field( $_REQUEST['com_lastname']);
+
+    $username = sanitize_text_field(  $_REQUEST['com_username'] );
+
+    $email = sanitize_text_field(  $_REQUEST['com_email']  );
+
+    $password = $wpdb->escape( sanitize_text_field( $_REQUEST['com_password']));
+
+    $status = wp_create_user($username,$password,$email);
+
+      $succress ='';
+
+    $error_msg='';
+
+     
+
+    if (is_wp_error($status))  {
+
+         $error_msg = __('Username or Email already registered, please try another one.',''); 
+
+    } 
+
+    else{
+
+      $user_id=$status;
+
+      //update_user_meta( $user_id,'first_name', $firstname);
+
+      //update_user_meta( $user_id,'last_name', $lastname);
+
+      
+
+      $succress= __('You are registered successfully.',''); 
+
+      
+
+    }  
+
+  }
+
+?>
+
+  
+
+    <?php if($error_msg!='') { ?><div class="error"><?php echo $error_msg; ?></div><?php }  ?>
+
+    <?php if($succress!='') { ?><div class="success"><?php echo $succress; ?></div><?php }  ?>
+
+    
+
+    <form  name="form" id="registration"  method="post">
+
+     
+
+      <div class="ftxt more-bottom-margin">
+
+       <label><?php _e("Username :",'');?></label><br>
+
+       <input id="com_username" name="com_username" type="text" class="input form-control" required value=<?php echo $username; ?> >
+
+      </div>
+
+      <div class="ftxt more-bottom-margin">
+
+      <label><?php _e("E-mail :",'');?></label><br>
+
+       <input id="com_email" name="com_email" type="email" class="input form-control" required value=<?php echo $email; ?> >
+
+      </div>
+
+      <div class="ftxt more-bottom-margin">
+
+      <label><?php _e("Password :",'');?></label><br>
+
+       <input id="password1" name="com_password" class="form-control" type="password" required class="input" />
+
+      </div>
+
+      <div class="ftxt more-bottom-margin">
+
+      <label><?php _e("Confirm Password : ",'');?></label><br>
+
+       <input id="password2" name="c_password" class="form-control" type="password" class="input" />
+
+      </div>
+
+      <div class="fbtn more-bottom-margin"><input type="submit" name='com_submit' class="button btn btn-primary"  value="Register"/> </div>
+
+    </form>
+
+  
+<?php 
+
+}
+
+
+
+//add registration shortcoode
+
+add_shortcode( 'gman-registration-form', 'gman_registration_shortcode' );
+
+
+
+
+// *****************  new function ********************
+// *****************  new function ********************
+// *****************  new function ********************
+// *****************  new function ********************
+// *****************  new function ********************
+// *****************  new function ********************
+
+
+
+function log_me_in_please( $user_id ) {
+    
+
+    wp_set_current_user( $user_id );
+
+    wp_set_auth_cookie( $user_id );
+    
+    wp_redirect( get_permalink() );
+
+    
+
+    
+
+
+    exit(); 
+}
+add_action( 'user_register', 'log_me_in_please' );
+
+
+
+// *****************  new function ********************
+// *****************  new function ********************
+// *****************  new function ********************
+// *****************  new function ********************
+// *****************  new function ********************
+// *****************  new function ********************
+
+
+function gman_login_redirect() {
+    //wp_redirect( get_permalink() );
+
+    printf("<script>location.href='/property-results-refi/'</script>");
+
+}
+
+add_action('wp_login', 'gman_login_redirect');
+
+
+// *****************  new function ********************
+// *****************  new function ********************
+// *****************  new function ********************
+// *****************  new function ********************
+// *****************  new function ********************
+// *****************  new function ********************
+
+
+
 add_filter( 'gform_save_field_value_43_1', 'gd_encrypt1', 10, 5 );
 
 function gd_encrypt1( $value, $lead, $field, $form ) {
@@ -272,7 +530,7 @@ $_SESSION['entry_id']=$entry_id;
 
 
 
-if ($form_id=43) {
+if ($form_id==43) {
 
 echo "just ran the encryption test form...";
 echo "<br/>";

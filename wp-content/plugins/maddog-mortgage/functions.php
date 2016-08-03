@@ -285,7 +285,21 @@ $token_string="Authorization: Bearer ".$token1;
     $status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
     if ($status != 200) {
-        wp_mail('support@kaleidico.com', 'Lenderful Alert: API call failure', "Error: call to URL $jsonURL failed with status $status, response $json_response, curl_error " . curl_error($curl) . ", curl_errno " . curl_errno($curl));
+
+        global $wpdb;
+
+        $error_timestamp=time();
+        $line_number=287;
+        $error_msg='Lenderful Alert: API call failure';
+
+
+        $wpdb->insert("lenderful_api_errors", array(
+   "error_timestamp" => $error_timestamp,
+   "line_number" => $line_number,
+   "error_msg" => $error_msg
+   ));
+
+        //wp_mail('support@kaleidico.com', 'Lenderful Alert: API call failure', "Error: call to URL $jsonURL failed with status $status, response $json_response, curl_error " . curl_error($curl) . ", curl_errno " . curl_errno($curl));
         die("Error: call to URL $jsonURL failed with status $status, response $json_response, curl_error " . curl_error($curl) . ", curl_errno " . curl_errno($curl));
     }
     curl_close($curl);
@@ -321,7 +335,21 @@ $token_string="Authorization: Bearer ".$token1;
 
 
     if ($status != 200) {
-        wp_mail('support@kaleidico.com', 'Lenderful Alert: API call failure', "Error: call to quote API failed");
+        global $wpdb;
+$error_timestamp=time();
+        $line_number=337;
+        $error_msg='Lenderful Alert: API call failure';
+
+
+        $wpdb->insert("lenderful_api_errors", array(
+   "error_timestamp" => $error_timestamp,
+   "line_number" => $line_number,
+   "error_msg" => $error_msg
+   ));
+
+
+
+        //wp_mail('support@kaleidico.com', 'Lenderful Alert: API call failure', "Error: call to quote API failed");
         error_log("Error: call to URL $jsonURL failed with status $status, response $json_response, curl_error " . curl_error($curl) . ", curl_errno " . curl_errno($curl));
     }
     curl_close($curl);
@@ -776,7 +804,7 @@ $jsonInput=json_encode(array(
                                         <span class="tg-per-month">/ mo</span></p>
                                 </div>
                                 <div class="tg-bottom">
-                                    <p class="center select-button"><a href="<?php echo get_page_link(12858); ?>" class="btn-block caps more-top-margin btn orange btn-primary btn-large">Get Approved</a>
+                                    <p class="center select-button"><a href="<?php echo get_page_link(2263); ?>" class="btn-block caps more-top-margin btn orange btn-primary btn-large">Get Approved</a>
                                     </p>
 
                                     <p>
@@ -850,7 +878,24 @@ $jsonInput=json_encode(array(
             <?php
         }
     }catch (Exception $e) {
-        wp_mail('support@kaleidico.com', 'Lenderful Alert: API call failure', "Error: call to contact API failed");
+
+        global $wpdb;
+$error_timestamp=time();
+        $line_number=880;
+        $error_msg='Lenderful Alert: API call failure';
+
+
+        $wpdb->insert("lenderful_api_errors", array(
+   "error_timestamp" => $error_timestamp,
+   "line_number" => $line_number,
+   "error_msg" => $error_msg
+   ));
+
+
+
+
+
+        //wp_mail('support@kaleidico.com', 'Lenderful Alert: API call failure', "Error: call to contact API failed");
         error_log($e->getMessage());
     }
 
@@ -1732,7 +1777,23 @@ echo "<br/>products array:";
             <?php
         }
     } catch (Exception $e) {
-        wp_mail('support@kaleidico.com', 'Lenderful Alert: API call failure', "Error: call to contact API failed");
+
+        global $wpdb;
+$error_timestamp=time();
+        $line_number=1779;
+        $error_msg='Lenderful Alert: API call failure';
+
+
+        $wpdb->insert("lenderful_api_errors", array(
+   "error_timestamp" => $error_timestamp,
+   "line_number" => $line_number,
+   "error_msg" => $error_msg
+   ));
+
+
+
+
+        //wp_mail('support@kaleidico.com', 'Lenderful Alert: API call failure', "Error: call to contact API failed");
         error_log($e->getMessage());
     }
 
@@ -1816,7 +1877,20 @@ function create_contact($echo = false)
         } else {
             $result_user = $user = register_new_user($firtName . $lastName, $email);
             if ($result_user instanceof WP_Error) {
-                wp_mail('support@kaleidico.com', 'Lenderful Alert', "Cant create user " . $email);
+
+                global $wpdb;
+$error_timestamp=time();
+        $line_number=1879;
+        $error_msg='Lenderful Alert: Cant create user';
+
+
+        $wpdb->insert("lenderful_api_errors", array(
+   "error_timestamp" => $error_timestamp,
+   "line_number" => $line_number,
+   "error_msg" => $error_msg
+   ));
+
+                //wp_mail('support@kaleidico.com', 'Lenderful Alert', "Cant create user " . $email);
             }
         }
 
@@ -1829,7 +1903,20 @@ function create_contact($echo = false)
                     $contactId = $rs->{'contactId'};
                 }
             } catch (Exception $e) {
-                wp_mail('support@kaleidico.com', 'Lenderful Alert: API call failure', "Error: call to contact API failed");
+
+                global $wpdb;
+$error_timestamp=time();
+        $line_number=1905;
+        $error_msg='Lenderful Alert: API Call failure';
+
+
+        $wpdb->insert("lenderful_api_errors", array(
+   "error_timestamp" => $error_timestamp,
+   "line_number" => $line_number,
+   "error_msg" => $error_msg
+   ));
+
+                //wp_mail('support@kaleidico.com', 'Lenderful Alert: API call failure', "Error: call to contact API failed");
                 error_log($e->getMessage());
             }
         } else {
@@ -1842,7 +1929,20 @@ function create_contact($echo = false)
                     $contactId = $rs->{'contactId'};
                 }
             } catch (Exception $e) {
-                wp_mail('support@kaleidico.com', 'Lenderful Alert: API call failure', "Error: call to contact API failed");
+global $wpdb;
+$error_timestamp=time();
+        $line_number=1931;
+        $error_msg='Lenderful Alert: API Call Failure';
+
+
+        $wpdb->insert("lenderful_api_errors", array(
+   "error_timestamp" => $error_timestamp,
+   "line_number" => $line_number,
+   "error_msg" => $error_msg
+   ));
+
+
+                //wp_mail('support@kaleidico.com', 'Lenderful Alert: API call failure', "Error: call to contact API failed");
                 error_log($e->getMessage());
             }
         }
@@ -1919,7 +2019,19 @@ function my_profile_update($user_id, $old_user_data)
                 update_field("contact_id", $contactId, "user_" . $user_id);
             }
         } catch (Exception $e) {
-            wp_mail('support@kaleidico.com', 'Lenderful Alert: API call failure', "Error: call to contact API failed");
+
+            global $wpdb;
+$error_timestamp=time();
+        $line_number=2021;
+        $error_msg='Lenderful Alert: API Call Failure';
+
+
+        $wpdb->insert("lenderful_api_errors", array(
+   "error_timestamp" => $error_timestamp,
+   "line_number" => $line_number,
+   "error_msg" => $error_msg
+   ));
+            //wp_mail('support@kaleidico.com', 'Lenderful Alert: API call failure', "Error: call to contact API failed");
             error_log($e->getMessage());
         }
     } else {
@@ -1932,7 +2044,21 @@ function my_profile_update($user_id, $old_user_data)
                 error_log("update contact: " . $jsonText);
             }
         } catch (Exception $e) {
-            wp_mail('support@kaleidico.com', 'Lenderful Alert: API call failure', "Error: call to contact API failed");
+
+            global $wpdb;
+$error_timestamp=time();
+        $line_number=2046;
+        $error_msg='Lenderful Alert: API Call Failure';
+
+
+        $wpdb->insert("lenderful_api_errors", array(
+   "error_timestamp" => $error_timestamp,
+   "line_number" => $line_number,
+   "error_msg" => $error_msg
+   ));
+
+
+            //wp_mail('support@kaleidico.com', 'Lenderful Alert: API call failure', "Error: call to contact API failed");
             error_log($e->getMessage());
         }
     }
